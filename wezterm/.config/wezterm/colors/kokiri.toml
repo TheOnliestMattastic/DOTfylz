@@ -1,0 +1,54 @@
+[colors]
+# =============================================================================
+# KOKIRI COLOR SCHEME FOR WEZTERM
+# =============================================================================
+# WHAT: WezTerm terminal colorscheme matching HYPERfix.nvim's Kokiri theme
+# WHY:  Consistent visual experience across terminal and editor
+# HOW:  Extracted primary colors from kokiri.lua with WCAG AAA contrast
+# NOTE: Maintains 7:1+ contrast ratio for accessibility
+# =============================================================================
+
+# Core colors
+foreground = "#a2faa2"
+background = "#071524"
+
+# Cursor and selection
+cursor_bg = "#a2faa2"
+cursor_border = "#a2faa2"
+cursor_fg = "#071524"
+
+# Selection highlight
+selection_bg = "#4d5d70"
+selection_fg = "#a2faa2"
+
+# ANSI Colors (0-7: normal, 8-15: bright)
+ansi = [
+  "#000715",    # black
+  "#ffb8d6",    # red
+  "#c5f19c",    # green
+  "#ffda88",    # yellow
+  "#93e5ff",    # blue
+  "#e8bfff",    # magenta
+  "#7ffbdd",    # cyan
+  "#5cb25e",    # white
+]
+
+brights = [
+  "#4d5d70",    # bright black
+  "#ffb8d6",    # bright red
+  "#c5f19c",    # bright green
+  "#ffda88",    # bright yellow
+  "#93e5ff",    # bright blue
+  "#e8bfff",    # bright magenta
+  "#7ffbdd",    # bright cyan
+  "#bfffbe",    # bright white
+]
+
+# UI colors
+tab_bar = { background = "#071524", active_tab = { bg_color = "#122030", fg_color = "#a1ceff" }, inactive_tab = { bg_color = "#071524", fg_color = "#a2faa2" }, inactive_tab_hover = { bg_color = "#122030", fg_color = "#a2faa2" } }
+
+# Search highlight
+# search_result_bg = "#ffda88"
+# search_result_fg = "#122030"
+# search_result_index_bg = "#c5f19c"
+# search_result_index_fg = "#122030"

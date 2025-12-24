@@ -1,16 +1,14 @@
 -- WezTerm Configuration
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- =============================================================================
 -- DISPLAY & APPEARANCE
 -- -----------------------------------------------------------------------------
-config.font_size = 18
-config.font = wezterm.font(
-  'JetBrains Mono',
-  { weight = 'Medium' }
-)
-config.color_scheme = 'tokyonight'
+config.font_size = 16
+config.font = wezterm.font("JetBrains Mono", { weight = "Medium" })
+config.color_scheme_dirs = { os.getenv("HOME") .. "/.config/wezterm/colors" }
+config.color_scheme = "kokiri"
 
 -- ============================================================================
 -- GENERAL BEHAVIOR
@@ -24,7 +22,7 @@ config.window_background_opacity = 0.95
 -- -----------------------------------------------------------------------------
 local act = wezterm.action
 config.keys = {
-  { key = 'Enter', mods = 'SHIFT', action = act.SendString '\n' }
+	{ key = "Enter", mods = "SHIFT", action = act.SendString("\n") },
 }
 
 return config
