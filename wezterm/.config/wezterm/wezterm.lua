@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 -- =============================================================================
 -- DISPLAY & APPEARANCE
 -- -----------------------------------------------------------------------------
-config.font_size = 16
+config.font_size = 12
 config.font = wezterm.font("JetBrains Mono", { weight = "Medium" })
 config.color_scheme_dirs = { os.getenv("HOME") .. "/.config/wezterm/colors" }
 config.color_scheme = "kokiri"
