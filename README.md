@@ -9,9 +9,16 @@ A personal dotfiles repo managed with GNU Stow—enabling my compulsive need to 
 This repo contains my personal configurations for:
 
 - **nvim** — Personal Neovim setup based on my [HYPERfix.nvim](https://github.com/TheOnliestMattastic/HYPERfix.nvim) template. Includes Lazy.nvim, LSP, DAP, and a custom colorscheme
-- **Bash** — `.bashrc` and bash completions for z/zoxide navigation
+- **Bash** — `.bashrc` and `.bash_profile` with zoxide, fzf, luarocks completions, and aliases
 - **Git** — Git configuration (mostly to avoid committing my shame)
 - **Wezterm** — Terminal emulator config because some of us have moved on from the 90s
+- **starship** — Catppuccin Macchiato prompt theme with custom directory icons
+- **fontconfig** — Font rendering rules (synthetic bold/oblique)
+- **amp** — Amp AI agent instructions (persona, coding standards, ADHD coaching)
+- **mimeapps** — Default application associations (Brave, Betterbird, Dolphin, etc.)
+- **gh** — GitHub CLI configuration
+- **OpenRGB** — RGB lighting profiles
+- **rclone** — Cloud storage mount configuration
 
 ## The Philosophy
 
@@ -31,14 +38,16 @@ cd ~/DOTfylz
 # macOS: brew install stow
 
 # Symlink everything
-stow Bash Git nvim wezterm
+stow Bash Git nvim wezterm starship fontconfig amp mimeapps gh OpenRGB rclone
 ```
 
 For specific packages, just stow the ones you want:
 ```bash
 stow nvim
-stow Bash
+stow starship
 ```
+
+> **⚠️ Sensitive files**: `rclone.conf` and `gh/hosts.yml` are `.gitignore`'d because they contain credentials. After cloning, copy these manually from a backup before stowing.
 
 ## Fair Warning
 
@@ -56,17 +65,31 @@ Each directory is set up for Stow and mirrors the structure of `$HOME`:
 
 ```
 DOTfylz/
-├── nvim/
-│   └── .config/nvim/          # Neovim configuration
+├── amp/
+│   └── .config/amp/           # Amp AI agent instructions
 ├── Bash/
 │   ├── .bashrc                # Bash configuration
-│   └── .bash_completion.d/    # Bash completions
+│   └── .bash_profile          # Bash login profile
+├── fontconfig/
+│   └── .config/fontconfig/    # Font rendering rules
+├── gh/
+│   └── .config/gh/            # GitHub CLI config (hosts.yml gitignored)
 ├── Git/
 │   └── .gitconfig             # Git configuration
+├── mimeapps/
+│   └── .config/mimeapps.list  # Default app associations
+├── nvim/
+│   └── .config/nvim/          # Neovim configuration
+├── OpenRGB/
+│   └── .config/OpenRGB/       # RGB lighting profiles
+├── rclone/
+│   └── .config/rclone/        # Cloud mounts (rclone.conf gitignored)
+├── starship/
+│   └── .config/starship.toml  # Starship prompt theme
 ├── wezterm/
 │   └── .config/wezterm/       # Wezterm terminal config
 └── assets/
-    └── banner.png            # This fancy banner
+    └── banner.png             # This fancy banner
 ```
 
 ## Why "DOTfylz"?
