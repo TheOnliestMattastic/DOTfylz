@@ -1,3 +1,4 @@
 # Sensitive credentials — copy these manually, do NOT commit
 rclone/.config/rclone/rclone.conf
 gh/.config/gh/hosts.yml
+OpenRGB/.config/OpenRGB/logs/
